@@ -1,0 +1,7 @@
+{
+  "name": "OnlineShops",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
