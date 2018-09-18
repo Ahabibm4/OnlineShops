@@ -1,0 +1,10 @@
+{
+  "shops": 
+  [
+    {
+      "name":"daraz",
+      "url" : "www.daraz.com"
+      
+    }
+  ]
+}
