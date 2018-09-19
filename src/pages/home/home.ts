@@ -41,11 +41,11 @@ export class HomePage {
 	}  
 
 	getRemoteData(){
-	var apiUrl = '../assets/data/data.json';
+		var apiUrl = '../assets/data/data.json';
         this.http.get(apiUrl).
-		    subscribe((data)=>{
-		      this.items = data["shops"];
-		    });
+	    subscribe((data)=>{
+	      this.items = data["shops"];
+	    });
     }
 
 }

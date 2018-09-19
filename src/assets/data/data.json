@@ -14,12 +14,12 @@
     {
       "name" : "Shoparu",
       "url" : "https://shoparu.com/",
-      "logo" : "shoparu.jpeg"
+      "logo" : "shoparu.png"
     },
     {
       "name" : "Bagdoom",
       "url" : "https://www.bagdoom.com/",
-      "logo" : "bagdoom.jpg"
+      "logo" : "bagdoom.png"
     },
     {
       "name" : "Ajkerdeal",
@@ -89,7 +89,7 @@
     {
       "name" : "Banglashoppers",
       "url" : "https://www.banglashoppers.com/",
-      "logo" : "banglashoppers.jpg"
+      "logo" : "banglashoppers.png"
     },
     {
       "name" : "Kikinben",
@@ -104,7 +104,7 @@
     {
       "name" : "Techshop",
       "url" : "https://www.techshopbd.com/",
-      "logo" : "techshopbd_logo.jpg"
+      "logo" : "techshopbd_logo.png"
     },
     {
       "name" : "Shwapno",
