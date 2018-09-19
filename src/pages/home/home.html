@@ -7,9 +7,12 @@
   </ion-navbar>
 </ion-header>
 <ion-content padding>
-    <button ion-button (click)="openWithSystemBrowser('https://www.daraz.com.bd/')">Open with System browser</button>
-    <button ion-button (click)="openWithCordovaBrowser('https://www.daraz.com.bd/')">Daraz</button>
-    <button ion-button (click)="openWithCordovaBrowser('https://m.ajkerdeal.com/')">Ajkerdeal</button>
-    <button ion-button (click)="openWithCordovaBrowser('https://www.daraz.com.bd/')">Open with Cordova browser</button>
+ 
+
+	 <ion-card  *ngFor="let item of items" (click)="openWithCordovaBrowser(item.url)">
+	 	<ion-card-content>
+	 		 <img src="../assets/imgs/{{item.logo}}"/>
+	 	</ion-card-content>
+	 </ion-card>
 </ion-content>
 

@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { HttpClientModule} from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 
 import { InAppBrowser , InAppBrowserOptions } from '@ionic-native/in-app-browser';
-import { HTTP } from '@ionic-native/http';
 
 @Component({
   selector: 'page-home',
@@ -33,32 +32,20 @@ export class HomePage {
 	    fullscreen : 'yes',//Windows only    
 	};
 
-  	constructor(public navCtrl: NavController, private theInAppBrowser: InAppBrowser, private http: HTTP) {
-
+  	constructor(public navCtrl: NavController, private theInAppBrowser: InAppBrowser, private http: HttpClient) {
+  		this.getRemoteData();
   	}
 	public openWithCordovaBrowser(url : string){
-	this.getRemoteData();
 	    let target = "_self";
 	    this.theInAppBrowser.create(url,target,this.options);
 	}  
 
 	getRemoteData(){
-	alert()
-        this.http.get('http://ionic.io', {}, {})
-  .then(data => {
-
-    console.log(data.status);
-    console.log(data.data); // data received by server
-    console.log(data.headers);
-
-  })
-  .catch(error => {
-
-    console.log(error.status);
-    console.log(error.error); // error message as string
-    console.log(error.headers);
-
-  });
+	var apiUrl = '../assets/data/data.json';
+        this.http.get(apiUrl).
+		    subscribe((data)=>{
+		      this.items = data["shops"];
+		    });
     }
 
 }
